@@ -43,11 +43,11 @@ public final class Config {
 
     public static final boolean QUICK_LOG = false;
 
-    public static final Jid BUG_REPORTS = Jid.of("bugs@conversations.im");
+    public static final Jid BUG_REPORTS = Jid.of("mrbot@ircnow.org");
     public static final Uri HELP = Uri.parse("https://help.conversations.im");
 
     public static final String DOMAIN_LOCK = null; // only allow account creation for this domain
-    public static final String MAGIC_CREATE_DOMAIN = "conversations.im";
+    public static final String MAGIC_CREATE_DOMAIN = "inspirenet.org";
     public static final Jid QUICKSY_DOMAIN = Jid.of("quicksy.im");
 
     public static final String CHANNEL_DISCOVERY = "https://search.jabber.network";
@@ -83,40 +83,40 @@ public final class Config {
     public static final int CONNECT_DISCO_TIMEOUT = 20;
     public static final int MINI_GRACE_PERIOD = 750;
 
-    public static final boolean XEP_0392 = true; // enables XEP-0392 v0.6.0
+    public static final boolean XEP_0392 = false; // enables XEP-0392 v0.6.0
 
     // media file formats. Homogenous Android or Conversations only deployments can switch to opus
     // and webp
-    public static final int AVATAR_SIZE = 192;
+    public static final int AVATAR_SIZE = 210;
     public static final Bitmap.CompressFormat AVATAR_FORMAT = Bitmap.CompressFormat.JPEG;
     public static final int AVATAR_CHAR_LIMIT = 9400;
 
     public static final int IMAGE_SIZE = 1920;
     public static final Bitmap.CompressFormat IMAGE_FORMAT = Bitmap.CompressFormat.JPEG;
-    public static final int IMAGE_QUALITY = 75;
+    public static final int IMAGE_QUALITY = 80;
 
     public static final boolean USE_OPUS_VOICE_MESSAGES = false;
 
     public static final int MESSAGE_MERGE_WINDOW = 20;
 
-    public static final int PAGE_SIZE = 50;
+    public static final int PAGE_SIZE = 55;
     public static final int MAX_NUM_PAGES = 3;
     public static final int MAX_SEARCH_RESULTS = 300;
 
     public static final int REFRESH_UI_INTERVAL = 500;
 
-    public static final int MAX_DISPLAY_MESSAGE_CHARS = 4096;
-    public static final int MAX_STORAGE_MESSAGE_CHARS = 2 * 1024 * 1024; // 2MB
+    public static final int MAX_DISPLAY_MESSAGE_CHARS = 2048;
+    public static final int MAX_STORAGE_MESSAGE_CHARS = 1024 * 1024; // 1MB
 
     public static final long MILLISECONDS_IN_DAY = 24 * 60 * 60 * 1000;
 
     // remove *other* omemo devices from *your* device list announcement after not seeing any
     // activity from them for 42 days. They will automatically add themselves after coming back
     // online.
-    public static final long OMEMO_AUTO_EXPIRY = 42 * MILLISECONDS_IN_DAY;
+    public static final long OMEMO_AUTO_EXPIRY = 12 * MILLISECONDS_IN_DAY;
 
     public static final boolean REMOVE_BROKEN_DEVICES = false;
-    public static final boolean OMEMO_PADDING = false;
+    public static final boolean OMEMO_PADDING = true;
     public static final boolean PUT_AUTH_TAG_INTO_KEY = true;
     public static final boolean AUTOMATICALLY_COMPLETE_SESSIONS = true;
     public static final boolean DISABLE_PROXY_LOOKUP =
@@ -147,11 +147,11 @@ public final class Config {
 
     public static final boolean USE_LMC_VERSION_1_1 = true;
 
-    public static final long MAM_MAX_CATCHUP = MILLISECONDS_IN_DAY * 5;
-    public static final int MAM_MAX_MESSAGES = 750;
+    public static final long MAM_MAX_CATCHUP = MILLISECONDS_IN_DAY * 7;
+    public static final int MAM_MAX_MESSAGES = 500;
 
     public static final ChatState DEFAULT_CHAT_STATE = ChatState.ACTIVE;
-    public static final int TYPING_TIMEOUT = 8;
+    public static final int TYPING_TIMEOUT = 5;
 
     public static final int EXPIRY_INTERVAL = 30 * 60 * 1000; // 30 minutes
 
@@ -214,7 +214,7 @@ public final class Config {
     }
 
     // How deep nested quotes should be displayed. '2' means one quote nested in another.
-    public static final int QUOTE_MAX_DEPTH = 7;
+    public static final int QUOTE_MAX_DEPTH = 10;
     // How deep nested quotes should be created on quoting a message.
-    public static final int QUOTING_MAX_DEPTH = 2;
+    public static final int QUOTING_MAX_DEPTH = 3;
 }
